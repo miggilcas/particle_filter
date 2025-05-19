@@ -96,4 +96,12 @@ particle_filter_node:
       scan: "/scan"
       particles: "/particle_cloud"
 ```
+## Tmuxinator
+Esta herramienta nos servirá para automatizar el lanzado de todos los terminales y nos será mucho más cómodo y útil para proyectos de mayor complejidad.
 
+```bash
+sudo apt install tmux tmuxinator
+cd ~/AdR/p4_student_ws/particle_filter
+tmuxinator start -p pf_auto.yml
+
+``` 
