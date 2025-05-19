@@ -1,0 +1,24 @@
+# Archivo de parámetros para el nodo Particle Filter
+
+particle_filter:
+  ros__parameters:
+    # Número de partículas utilizadas por el filtro
+    particle_count: 500  # ← puedes bajar a 20 para pruebas rápidas
+
+    # Ruido en el modelo de movimiento (puedes ajustarlo si las partículas se dispersan demasiado o poco)
+    motion_noise:
+      x: 0.1
+      y: 0.1
+      theta: 0.05
+
+    # Nombre del archivo de mapa YAML (debe estar en la carpeta `config/`)
+    map_file: "mapa.yaml"
+
+    # Número de rayos para el submuestreo:
+    num_rays_used: 30
+    # Puedes personalizar los topics si fuera necesario
+    # topics:
+    #   odom: "/odom"
+    #   scan: "/scan"
+    #   particles: "/particle_cloud"
+
